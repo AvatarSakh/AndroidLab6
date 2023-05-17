@@ -1,0 +1,26 @@
+fun createBox(width: Int, length: Int): Array<IntArray> {
+    val matrix = Array(length) { IntArray(width) }
+
+    var leftCol = 0 
+    var rightCol = width - 1
+    var downRow = length - 1
+    var number = 1
+
+    while (leftCol <= rightCol && leftCol <= downRow) {
+        for (i in leftCol..rightCol) {
+            matrix[leftCol][i] = number
+            matrix[downRow][i] = number
+        }
+
+        for (j in leftCol..downRow){
+            matrix[j][leftCol] = number
+            matrix[j][rightCol] =  number
+        }
+        leftCol += 1
+        rightCol -= 1
+        downRow -= 1
+        number += 1
+    }
+
+    return matrix
+}

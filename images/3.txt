@@ -1,0 +1,13 @@
+package countdig
+
+fun nbDig(n:Int, d:Int):Int {
+    var countD = 0
+    for (k in 0..n){
+        var kk = k*k
+        var string = kk.toString()
+        for (i in string.indices){
+            if(string[i] == ('0' + d)) countD++
+        }
+    }
+    return countD
+}

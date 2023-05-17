@@ -1,0 +1,9 @@
+fun geometricSequenceElements(a: Int, r: Int, n: Int): String {
+    var resultString = "" + a
+    var currentValue = a
+    for (i in 1..n-1){
+        currentValue *=r
+        resultString+=", "+currentValue
+    }
+    return resultString
+}

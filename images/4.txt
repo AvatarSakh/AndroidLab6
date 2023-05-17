@@ -1,0 +1,14 @@
+object FixStringCase {
+    
+    fun solve(s: String): String {
+        var countUpperCase = 0
+        var countLowCase = 0
+        for (i in 0..s.length-1){
+            if(Character.isLowerCase(s[i])) countLowCase++
+            else countUpperCase++
+        }
+        if (countLowCase >= countUpperCase) return s.toLowerCase()
+        else return s.toUpperCase()
+    }
+    
+}

@@ -1,0 +1,20 @@
+fun alphabetWar(fight: String): String {
+    var rightsum = 0
+    var leftsum = 0
+   for (char in fight){
+       when (char) {
+           'w' -> leftsum +=4
+           'p' -> leftsum +=3
+           'b' -> leftsum +=2
+           's' -> leftsum +=1
+           'm' -> rightsum +=4
+           'q' -> rightsum +=3
+           'd' -> rightsum +=2
+           'z' -> rightsum +=1
+       }
+   }
+   if (rightsum == leftsum) return "Let\'s fight again!"
+    if(rightsum > leftsum) return "Right side wins!"
+    else return "Left side wins!"
+
+}
